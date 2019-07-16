@@ -93,7 +93,7 @@ router.get('/saveleads', async (req, res) => {
         });
     });
 
-    // await Lead.collection.drop();
+    await Lead.collection.drop();
 
     Lead.insertMany(leads, (err, docs) => {
         if (err) {
